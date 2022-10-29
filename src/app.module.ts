@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
-import { CoffeesController } from './coffees/coffees.controller';
-import { CoffeesController } from './coffees/coffees.controller';
+import { CoffeesController } from './coffees/coffees.controller'
+import { CoffeesService } from './coffees/coffees.service';
 
 @Module({
   imports: [
@@ -19,6 +19,6 @@ import { CoffeesController } from './coffees/coffees.controller';
     }),
   ],
   controllers: [AppController, CoffeesController],
-  providers: [AppService],
+  providers: [AppService, CoffeesService],
 })
 export class AppModule {}
